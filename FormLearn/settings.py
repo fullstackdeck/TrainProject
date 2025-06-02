@@ -78,13 +78,14 @@ WSGI_APPLICATION = 'FormLearn.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
+        'NAME': 'postgres',  # Nom de la base
+        'USER': 'postgres.aawgtembtkkgacfgtpzb',  # Ton user complet (avant le @)
         'PASSWORD': 'ladjilama',
-        'HOST': 'db.aawgtembtkkgacfgtpzb.supabase.co',
-        'PORT': '5432',
+        'HOST': 'aws-0-eu-west-3.pooler.supabase.com',  # Host du pooler
+        'PORT': '5432',  # Port du pooler
     }
 }
+
 
 
 

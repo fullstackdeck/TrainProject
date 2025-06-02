@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from Students.models import Apprenant
+
 
 class Instructor(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -17,6 +19,7 @@ class Course(models.Model):
     description = models.TextField()
     image = models.ImageField(upload_to='course_images/', blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    apprenants=models.ManyToManyField(Apprenant, related_name="cous_suivi")
     
 
     def __str__(self):
