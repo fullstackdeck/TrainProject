@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Page d'accueil{% endblock %}
+
+{% block content %}
+
+<div id="course-player-page" class="page hidden">
+    <div class="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Video/Content Area -->
+            <div class="lg:col-span-3">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <div id="video-player" class="aspect-video bg-gray-900 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <i class="fas fa-play-circle text-6xl mb-4"></i>
+                            <p class="text-lg">Lecteur vidéo</p>
+                            <p class="text-sm text-gray-300">Le contenu de la vidéo s'afficherait ici</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h2 id="current-chapter-title" class="text-2xl font-bold mb-2"></h2>
+                        <p id="current-chapter-description" class="text-gray-600 dark:text-gray-300"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Playlist Sidebar -->
+            <div>
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700">
+                    <div class="p-4 border-b border-gray-200 dark:border-gray-700">
+                        <h3 id="player-course-title" class="font-semibold"></h3>
+                        <div class="mt-2">
+                            <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-1">
+                                <span>Progression</span>
+                                <span id="course-progress-text">0%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div id="course-progress-bar" class="bg-primary h-2 rounded-full progress-bar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="chapter-playlist" class="max-h-96 overflow-y-auto">
+                        <!-- Chapter playlist will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

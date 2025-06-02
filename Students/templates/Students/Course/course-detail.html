@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Page d'accueil{% endblock %}
+
+{% block content %}
+
+<div id="course-detail-page" class="page hidden">
+    <div class="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <!-- Course Header -->
+        <div id="course-header" class="mb-8">
+            <!-- Course header will be populated by JavaScript -->
+        </div>
+
+        <!-- Course Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Course Description -->
+            <div class="lg:col-span-2">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700 p-6">
+                    <h3 class="text-xl font-semibold mb-4">Description du cours</h3>
+                    <div id="course-description" class="text-gray-600 dark:text-gray-300">
+                        <!-- Description will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Sidebar -->
+            <div>
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700 p-6">
+                    <div id="course-actions" class="mb-6">
+                        <!-- Action buttons will be populated by JavaScript -->
+                    </div>
+                    
+                    <h4 class="text-lg font-semibold mb-4">Chapitres du cours</h4>
+                    <div id="course-chapters" class="space-y-2">
+                        <!-- Chapters will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

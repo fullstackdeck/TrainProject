@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Page d'accueil{% endblock %}
+
+{% block content %}
+<div id="courses-page" class="page hidden">
+    <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <div class="mb-8">
+            <h2 class="text-3xl font-bold">Catalogue des cours</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">Découvrez tous nos cours disponibles</p>
+        </div>
+        
+        <!-- Search and Filters -->
+        <div class="mb-8">
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class="flex-1">
+                    <input id="course-search" type="text" placeholder="Rechercher un cours..." class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary bg-white dark:bg-gray-700 text-base">
+                </div>
+                <select id="category-filter" class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary bg-white dark:bg-gray-700 text-base">
+                    <option value="">Toutes les catégories</option>
+                    <option value="programmation">Programmation</option>
+                    <option value="design">Design</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="business">Business</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Course Grid -->
+        <div id="all-courses" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- All courses will be populated by JavaScript -->
+        </div>
+    </div>
+</div>
+
+{% endblock %}

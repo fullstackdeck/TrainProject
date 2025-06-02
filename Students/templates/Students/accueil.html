@@ -1,0 +1,42 @@
+{% extends './header.html' %}
+
+{% load static %}
+
+{% block title %}Page d'accueil{% endblock %}
+
+{% block content %}
+
+<div id="home-page" class="page">
+    <div class="bg-gradient-to-r from-primary to-purple-600 text-white">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-4xl font-extrabold sm:text-5xl lg:text-6xl">
+                    Apprenez à votre rythme
+                </h2>
+                <p class="mt-6 max-w-2xl mx-auto text-xl">
+                    Découvrez notre plateforme de cours en ligne avec des contenus de qualité et un suivi personnalisé.
+                </p>
+                <div class="mt-10">
+                    <button id="cta-register" class="px-8 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+                        Commencer maintenant
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Featured Courses -->
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h3 class="text-3xl font-bold mb-12">Cours populaires</h3>
+        </div>
+        <div id="featured-courses" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Featured courses will be populated by JavaScript -->
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'Students/js/populaires.js' %}"></script>
+{% endblock %}
