@@ -44,12 +44,12 @@
                         </div>
                     </div>
                     <div id="auth-buttons" class="flex space-x-2">
-                        <button id="login-btn" class="px-4 py-2 text-sm font-medium text-primary hover:text-primary-dark">
+                        <a href="{% url 'login' %}" id="login-btn" class="px-4 py-2 text-sm font-medium text-primary cursor-pointer hover:text-primary-dark">
                             Connexion
-                        </button>
-                        <button id="register-btn" class="px-4 py-2 text-sm font-medium bg-primary text-white rounded-md hover:bg-primary-dark">
+                        </a>
+                        <a href="{% url 'register' %}" id="register-btn" class="px-4 py-2 text-sm font-medium bg-primary cursor-pointer text-white rounded-md hover:bg-primary-dark">
                             S'inscrire
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -64,6 +64,7 @@
     </main>
 
     {% block scripts %}
+    <script src="{% static 'Students/js/header.js' %}"></script>
     {% endblock %}
 
 </body>

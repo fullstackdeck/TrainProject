@@ -201,19 +201,7 @@
 
             setupEventListeners() {
                 // Navigation
-                document.getElementById('login-btn').addEventListener('click', () => this.showAuth('login'));
-                document.getElementById('register-btn').addEventListener('click', () => this.showAuth('register'));
                 document.getElementById('cta-register').addEventListener('click', () => this.showAuth('register'));
-                document.getElementById('logout-btn').addEventListener('click', () => this.logout());
-                document.getElementById('browse-courses-btn').addEventListener('click', () => this.showPage('courses'));
-
-                // Auth form
-                document.getElementById('auth-form').addEventListener('submit', (e) => this.handleAuth(e));
-                document.getElementById('auth-switch').addEventListener('click', () => this.toggleAuthMode());
-
-                // Search and filter
-                document.getElementById('course-search').addEventListener('input', (e) => this.filterCourses());
-                document.getElementById('category-filter').addEventListener('change', (e) => this.filterCourses());
             }
 
             showPage(pageId) {

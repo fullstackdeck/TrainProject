@@ -1,17 +1,21 @@
 {% extends '../header.html' %}
 
-{% block title %}Connexion{% endblock %}
+{% block title %}Inscription{% endblock %}
 
 {% block content %}
 
-<div id="auth-page" class="page">
+<div id="auth-page" class="page hidden">
     <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full space-y-8">
             <div>
-                <h2 id="auth-title" class="mt-6 text-center text-3xl font-extrabold">Connexion</h2>
+                <h2 id="auth-title" class="mt-6 text-center text-3xl font-extrabold">Inscription</h2>
             </div>
             <form id="auth-form" class="mt-8 space-y-6">
                 <div class="rounded-md shadow-sm space-y-4">
+                    <div id="name-field" class="hidden">
+                        <label for="name" class="sr-only">Nom complet</label>
+                        <input id="name" name="name" type="text" class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white bg-white dark:bg-gray-700 focus:outline-none focus:ring-primary focus:border-primary text-base" placeholder="Nom complet">
+                    </div>
                     <div>
                         <label for="email" class="sr-only">Email</label>
                         <input id="email" name="email" type="email" required class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white bg-white dark:bg-gray-700 focus:outline-none focus:ring-primary focus:border-primary text-base" placeholder="Adresse email">
